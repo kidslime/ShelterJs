@@ -1,0 +1,28 @@
+@import "normalize";
+@import "abstract/constants";
+@import "abstract/placeholder";
+@import "abstract/mixins";
+@import "base/base";
+@import "layouts/container";
+@import "layouts/header";
+@import "components/not-only";
+@import "components/menu";
+@import "components/buttons";
+@import "components/about";
+@import "components/slider";
+@import "components/our-friends";
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+
+// .header {}
+
+// .not-only {
+//     background: url(/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+//     padding-top: 90px;
+// }
+
+// .not-only__inner {
+//     margin-top: -90px;
+// }

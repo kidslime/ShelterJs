@@ -1,0 +1,32 @@
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 3rem 0;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+.logo__title {
+    @extend %font-add;
+    @include font($size: 3.2rem, $line-height: 3.5rem);
+    font-style: normal;
+    letter-spacing: 0.06em;
+    color: $color-primary;
+    margin-bottom: 1rem;
+}
+
+.logo__subtitle {
+    font-family: 'Arial';
+    @include font($size: 1.32rem, $line-height: 1.5rem);
+    letter-spacing: 0.1em;
+    color: $color-light-xl;
+}

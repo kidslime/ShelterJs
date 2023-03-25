@@ -1,0 +1,40 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    @extend %font-prim;
+    @include font($size: 1.5rem, $line-height: 2.4rem, $weight: normal);
+}
+
+a {
+    text-decoration: none;
+}
+p {
+    margin: 0;
+}
+
+h1 {
+    @extend %font-add;
+    @include font($size: 4.4rem, $line-height: 5.7rem);
+    color: $color-light-xl;
+    margin: 0;
+}
+
+h2 {
+    @extend %font-add;
+    @include font($size: 3.5rem, $line-height: 4.5rem);
+    letter-spacing: 0.06em;
+    margin: 0;
+    text-align: center;
+    color: $color-dark-l;
+}
+
+h3 {
+    @extend %font-add;
+    @include font($size: 2rem, $line-height:2.3rem);
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    margin-top: 2.5rem;
+    margin-bottom: 2.4rem;
+}

@@ -1,0 +1,22 @@
+.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item {
+    list-style: none;
+    &:not(:last-child) {
+        margin-right: 35px;
+    }
+}
+
+.menu__link {
+    @include font($size:1.5rem, $line-height:2.4rem);
+    display: inline-block;
+    text-decoration: none;
+    color: $color-dark-s;
+    &_active {
+        border-bottom: 0.3rem solid $color-primary;
+    }
+}

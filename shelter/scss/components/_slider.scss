@@ -1,0 +1,30 @@
+.slider__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+}
+
+.slider__line {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 9rem;
+}
+
+.card {
+    text-align: center;
+    background-color: $color-light-s;
+    padding-bottom: 3rem;
+    border-radius: 0.9rem;
+}
+.arrow-img {
+    display: block;
+    width: 100%;
+}
+
+.slider__button {
+    padding: 2.1rem 1.7rem;
+    border: 2px solid $color-primary;
+    border-radius: 100%;
+    background-color: transparent;
+}

@@ -1,0 +1,26 @@
+.not-only {
+    background: url(../images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+    padding-top: 18rem;
+}
+
+.not-only__text {
+    @include font($size: 1.5rem, $line-height: 2.4rem);
+    color: $color-dark-s;
+    margin: 0 0 4.2rem 0;
+}
+
+.not-only__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.not-only__left {
+    max-width: 46rem;
+    padding-top: 16.3rem;
+    
+}
+
+.not-only__title {
+    max-width: 31rem;
+    margin-bottom: 4.2rem;
+}
