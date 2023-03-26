@@ -1,0 +1,60 @@
+.ico {
+    background: url(../images/credit-card.svg);
+    width: 30px;
+    height: 23px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin-right: 1.5rem;
+}
+.in-addition {
+    padding: 8rem 0 10rem 0;
+    background-color: $color-light-l;
+}
+
+.in-additional__button {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-radius: 0.9rem;
+    padding: 1rem 1.5rem;
+    @extend %font-add;
+    @include font($size: 2rem, $line-height:2.3rem);
+
+letter-spacing: 0.06em;
+
+/* color-dark-l */
+
+color: $color-dark-l;
+
+}
+
+.in-addition__descr {
+    @include font($size: 1.2rem, $line-height:1.8rem, $style: italic);
+   
+
+/* color-dark-m */
+
+color: $color-dark-m;
+}
+
+.in-addition__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.in-addition__left {
+    max-width: 38rem;
+}
+
+.in-addition__title {
+    text-align: left;
+    max-width: 30rem;
+    margin-bottom: 2rem;
+}
+
+.in-addition__subtitle {
+    margin-bottom: 2rem;
+    margin-top: 0;
+}

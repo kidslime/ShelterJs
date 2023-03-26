@@ -38,3 +38,10 @@ h3 {
     margin-top: 2.5rem;
     margin-bottom: 2.4rem;
 }
+
+h4 {
+    @extend %font-add;
+    @include font($size: 1.5rem, $line-height:1.7rem);
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}

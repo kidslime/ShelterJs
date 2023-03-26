@@ -16,6 +16,13 @@
     background-color: $color-light-s;
     padding-bottom: 3rem;
     border-radius: 0.9rem;
+    transition: all 0.3s;
+    &:hover {
+        cursor: pointer;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background-color: $color-light-xl;
+    
+    }
 }
 .arrow-img {
     display: block;

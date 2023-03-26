@@ -1,0 +1,35 @@
+.help__list {
+
+    margin: 0;
+    display: flex;
+    gap: 55px 120px;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.help {
+    padding: 8rem 0 10rem 0;
+}
+
+.help__title {
+    margin-bottom: 6rem;
+}
+.help__item {
+    text-align: center;
+    // display: inline-block;
+}
+
+.help__item-title {
+    margin: 3rem 0 0 0;
+}
+
+.help__item-image {
+    display: block;
+    height: 6rem;
+    margin: auto;
+    width: 60px;
+
+}
