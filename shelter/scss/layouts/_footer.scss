@@ -20,8 +20,11 @@
     display: flex;
     @extend %font-add;
     @include font($size: 2rem, $line-height:2.3rem);
-letter-spacing: 0.06em;
-color: $color-primary;
+    letter-spacing: 0.06em;
+    color: $color-primary;
+    &:hover {
+        filter: brightness(1.2);
+    }
 }
 
 .footer__inner {

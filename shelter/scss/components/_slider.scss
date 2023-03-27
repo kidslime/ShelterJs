@@ -34,4 +34,9 @@
     border: 2px solid $color-primary;
     border-radius: 100%;
     background-color: transparent;
+    transition: all .3s;
+    &:hover {
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+    }
 }
