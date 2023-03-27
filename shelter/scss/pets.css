@@ -923,6 +923,7 @@ h4 {
   border-radius: 10rem;
   letter-spacing: 0.06em;
   color: #292929;
+  transition: all .3s;
 }
 
 .slider-controlls__btn:hover {
