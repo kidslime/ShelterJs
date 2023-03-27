@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pets</title>
     <link rel="stylesheet" href="scss/pets.css">
 </head>
 
@@ -13,23 +13,23 @@
     <div class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="#" class="logo">
+                <a href="main.html" class="logo">
                     <span class="logo__title">Cozy House</span>
                     <span class="logo__subtitle">Shelter for pets in Boston</span>
                 </a>
                 <nav class="header__menu">
                     <ul class="menu">
                         <li class="menu__item">
-                            <a href="" class="menu__link ">About the shelter</a>
+                            <a href="main.html" class="menu__link ">About the shelter</a>
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link menu__link_active">Our pets</a>
+                            <a href="#" class="menu__link menu__link_active">Our pets</a>
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Help the shelter</a>
+                            <a href="main.html#help" class="menu__link">Help the shelter</a>
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Contacts</a>
+                            <a href="#footer" class="menu__link">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -61,36 +61,73 @@
                     </div>
                     <div class="card">
                         <img src="images/pets-sophie.png" alt="">
-                        <h3 class="card__title">Woody</h3>
+                        <h3 class="card__title">Sophie</h3>
                         <a href="$" class="button button_transparent">Learn more</a>
                     </div>
                     <div class="card">
                         <img src="images/pets-timmy.png" alt="">
-                        <h3 class="card__title">Woody</h3>
+                        <h3 class="card__title">Timmy</h3>
                         <a href="$" class="button button_transparent">Learn more</a>
                     </div>
                     <div class="card">
                         <img src="images/pets-charly.png" alt="">
-                        <h3 class="card__title">Woody</h3>
+                        <h3 class="card__title">Charly</h3>
                         <a href="$" class="button button_transparent">Learn more</a>
                     </div>
                     <div class="card">
                         <img src="images/pets-scarlet.png" alt="">
-                        <h3 class="card__title">Woody</h3>
+                        <h3 class="card__title">Scarlett</h3>
                         <a href="$" class="button button_transparent">Learn more</a>
                     </div>
                     <div class="card">
                         <img src="images/pets-freddie.png" alt="">
-                        <h3 class="card__title">Woody</h3>
+                        <h3 class="card__title">Freddie</h3>
                         <a href="$" class="button button_transparent">Learn more</a>
                     </div>
                 </div>
 
+
             </div>
 
-            <a href="#" class="button">Get to know the rest</a>
+            <div class="slider-controlls">
+                <button class="slider-controlls__btn slider-controlls__btn_disabled">&lt;&lt;</button>
+                <button class="slider-controlls__btn slider-controlls__btn_disabled">&lt;</button>
+                <button class="slider-controlls__btn slider-controlls__btn_active">1</button>
+                <button class="slider-controlls__btn">&gt;</button>
+                <button class="slider-controlls__btn">&gt;&gt;</button>
+            </div>
         </div>
     </section>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="contacts footer__contacts">
+                    <h2 class="contacts__title">For questions and suggestions</h2>
+                    <a href="mailto:email@shelter.com" class="social-link contacts__link">
+                        <span class="ico-link ico-link_mail"></span>
+
+                        email@shelter.com</a>
+                    <a href="tel:+136745677554" class="social-link contacts__link">
+                        <span class="ico-link ico-link_phone"></span>
+                        +13 674 567 75 54</a>
+
+                </div>
+                <div class="location footer__location">
+                    <h2 class="location__title">We are waiting for your visit</h2>
+                    <a href="https://www.google.ru/maps/place/21R+Broad+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3584038,-71.0545265,21z/data=!4m13!1m7!3m6!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!2zMSBDZW50cmFsIFN0LCBCb3N0b24sIE1BIDAyMTA5LCDQodCo0JA!3b1!8m2!3d42.3585519!4d-71.0547263!3m4!1s0x89e370868e973d63:0x2807d016850ecd89!8m2!3d42.358452!4d-71.05466"
+                        target="_blank" class=" social-link location__link">
+                        <span class="ico-link ico-link_pin"></span>
+                        <span class="fix">1 Central Street, Boston (entrance from the store)</span></a>
+                    <a href="https://www.google.ru/maps/place/18+South+Rd,+Londonderry,+NH+03053,+%D0%A1%D0%A8%D0%90/@42.8246219,-71.3622186,21z/data=!4m5!3m4!1s0x89e3ad7442d3b7b7:0x5550ec16f1a4554d!8m2!3d42.8246217!4d-71.3621723"
+                        target="_blank" class="social-link location__link">
+                        <span class="ico-link ico-link_pin"></span>
+                        18 South Park, London </a>
+
+                </div>
+                <img src="images/footer-puppy.png" alt="">
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
