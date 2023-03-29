@@ -1,0 +1,52 @@
+%hambirger-line {
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $color-primary;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    @include media-tablet-small {
+        display: inline-block;
+        order: 2;
+        z-index: 1;
+    }
+    &::before {
+        @extend %hambirger-line;
+        content: "";
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        @extend %hambirger-line;
+        content: "";
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.hamburger__line {
+    @extend %hambirger-line;
+    top: 50%; 
+    transform: translate(0, -50%);
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ .hamburger .hamburger__line {
+    transform: rotate(90deg);
+}
+input:checked ~ .hamburger::before{
+    transform: rotate(90deg);
+}
+input:checked ~ .hamburger::after {
+    transform: rotate(90deg);
+    
+}

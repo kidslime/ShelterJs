@@ -1,4 +1,8 @@
 .container {
     max-width: $container-width;
     margin: auto;
+    padding: 0 30px;
+    @include  media-mobile-big {
+        padding: 0 10px;
+    }
 }

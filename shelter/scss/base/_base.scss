@@ -37,6 +37,9 @@ h3 {
     color: $color-dark-l;
     margin-top: 2.5rem;
     margin-bottom: 2.4rem;
+    @include media-slider-width  {
+        @include font($size: 1.5rem, $line-height:1.7rem);
+    }
 }
 
 h4 {

@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include  media-mobile-big {
+        padding: 0 10px;
+    }
 }
 
 .header {
@@ -29,4 +32,10 @@
     @include font($size: 1.32rem, $line-height: 1.5rem);
     letter-spacing: 0.1em;
     color: $color-light-xl;
+}
+
+.header__menu {
+    @include media-tablet-small{
+        display: block;
+    }
 }

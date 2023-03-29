@@ -3,6 +3,17 @@
     display: flex;
     margin: 0;
     padding: 0;
+    @include media-tablet-small{
+        flex-direction: column;
+        background-color: $color-dark-3xl;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 320px;
+        justify-content: start;
+        align-items: center;
+    }
 }
 
 .menu__item {

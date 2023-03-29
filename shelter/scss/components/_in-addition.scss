@@ -42,6 +42,10 @@ color: $color-dark-m;
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    @include  media-laptop-small {
+        flex-direction: column;
+        gap: 6rem;
+    }
 }
 
 .in-addition__left {
@@ -57,4 +61,10 @@ color: $color-dark-m;
 .in-addition__subtitle {
     margin-bottom: 2rem;
     margin-top: 0;
+}
+
+.in-addition__image {
+    @include  media-laptop-small {
+        order: 2;
+    }
 }
