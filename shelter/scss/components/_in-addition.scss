@@ -9,6 +9,10 @@
 .in-addition {
     padding: 8rem 0 10rem 0;
     background-color: $color-light-l;
+    @include media-mobile-big{
+        padding-top: 40px;
+        padding-bottom: 42px;
+    }
 }
 
 .in-additional__button {
@@ -25,6 +29,10 @@ letter-spacing: 0.06em;
 /* color-dark-l */
 
 color: $color-dark-l;
+    @include media-mobile-big{
+        @include font($size: 1.5rem, $line-height:1.7rem);
+
+    }
 
 }
 
@@ -46,16 +54,30 @@ color: $color-dark-m;
         flex-direction: column;
         gap: 6rem;
     }
+    @include  media-mobile-big {
+        gap: 44px;
+    }
 }
 
 .in-addition__left {
     max-width: 38rem;
+    @include  media-mobile-big {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    padding: 0 9px;
+    }
 }
 
 .in-addition__title {
     text-align: left;
     max-width: 30rem;
     margin-bottom: 2rem;
+    @include  media-mobile-big {
+        text-align: center;
+        max-width: 220px;
+    }
 }
 
 .in-addition__subtitle {
@@ -64,7 +86,11 @@ color: $color-dark-m;
 }
 
 .in-addition__image {
+    max-width: 100%;
     @include  media-laptop-small {
         order: 2;
+    }
+    @include media-mobile-big {
+        padding: 0 20px;
     }
 }

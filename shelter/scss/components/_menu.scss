@@ -4,15 +4,16 @@
     margin: 0;
     padding: 0;
     @include media-tablet-small{
+        display: none;
         flex-direction: column;
-        background-color: $color-dark-3xl;
+        background-color: #292929;
         height: 100%;
         position: fixed;
         top: 0;
         right: 0;
         width: 320px;
-        justify-content: start;
         align-items: center;
+        padding-top: 248px;
     }
 }
 
@@ -20,6 +21,19 @@
     list-style: none;
     &:not(:last-child) {
         margin-right: 35px;
+        @include media-tablet-small{
+            margin-right: 0;
+        }
+    }
+    &:nth-child(1) {
+        @include media-tablet-small{
+            margin-bottom: 43px;
+        }
+    }
+    &:not(:first-child):not(:last-child) {
+        @include media-tablet-small{
+            margin-bottom: 40px;
+        }
     }
 }
 
@@ -35,5 +49,8 @@
     }
     &:hover {
         color: $color-light-s;
+    }
+    @include media-tablet-small{
+        @include font($size:3.2rem, $line-height:5.1rem);
     }
 }

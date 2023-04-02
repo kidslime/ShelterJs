@@ -40,13 +40,6 @@ input {
     display: none;
 }
 
-input:checked ~ .hamburger .hamburger__line {
+input:checked ~ .hamburger {
     transform: rotate(90deg);
-}
-input:checked ~ .hamburger::before{
-    transform: rotate(90deg);
-}
-input:checked ~ .hamburger::after {
-    transform: rotate(90deg);
-    
 }
