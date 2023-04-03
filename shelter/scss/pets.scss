@@ -3,6 +3,7 @@
 @import "abstract/placeholder";
 @import "abstract/mixins";
 @import "base/base";
+@import "base/hamberger";
 @import "layouts/container";
 @import "layouts/header";
 @import "components/not-only";
@@ -11,8 +12,6 @@
 @import "components/about";
 @import "components/slider";
 @import "components/our-friends";
-@import "components/help";
-@import "components/in-addition";
 @import "layouts/footer";
 
 .header {
@@ -32,6 +31,17 @@
     &:hover {
         color: $color-dark-3xl;
     }
+}
+.hamburger{
+    &::before {
+        background-color: $color-hamburger-menu;
+    }
+    &::after {
+        background-color: $color-hamburger-menu;
+    }
+}
+.hamburger__line {
+    background-color: $color-hamburger-menu;
 }
 
 
@@ -84,3 +94,70 @@
         border-color: $color-primary;
     }
 }
+
+.card {
+    
+    @include  media-laptop-small {
+        padding-bottom: 0;
+        &:nth-child(3n) {
+            display: block;
+        }
+        &:nth-child(2n) {
+            display: block;
+        }
+        &:nth-child(7) {
+            display: none;
+        }
+        &:nth-child(8) {
+            display: none;
+        }
+    }
+    @include  media-mobile-big {
+        &:nth-child(n+4) {
+            display: none;
+        }
+    }
+
+}
+
+.our-friends {
+    @include  media-laptop-small {
+        
+        padding-bottom: 77px;
+    }
+    @include  media-mobile-big {
+        padding-bottom: 43px;
+    }
+}
+
+.our-friends__title {
+    @include  media-laptop-small {
+        
+       
+        margin-bottom: 31px;
+    }
+    @include  media-mobile-big {
+        margin-bottom: 42px;
+    }
+}
+
+.slider__wrapper {
+    @include  media-laptop-small {
+        
+        margin-bottom: 68px;
+    
+    }
+    @include  media-mobile-big {
+        margin-bottom: 71px;
+    }
+}
+
+.slider__line {
+    @include  media-laptop-small {
+        
+        
+        justify-content: center;
+        gap: 60px 40px;
+    }
+}
+
