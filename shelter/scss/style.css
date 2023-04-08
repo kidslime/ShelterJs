@@ -497,12 +497,13 @@ h4 {
   position: relative;
   width: 30px;
   height: 22px;
+  transition: all 0.5s;
 }
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .hamburger {
     display: inline-block;
     order: 2;
-    z-index: 1;
+    z-index: 2;
   }
 }
 .hamburger::before {
@@ -521,12 +522,12 @@ h4 {
   transform: translate(0, -50%);
 }
 
-input {
-  display: none;
+.rotate {
+  transform: rotate(90deg);
 }
 
-input:checked ~ .hamburger {
-  transform: rotate(90deg);
+.unscroll {
+  overflow: hidden;
 }
 
 .container {
@@ -686,18 +687,19 @@ input:checked ~ .hamburger {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     background-color: #292929;
     height: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -320px;
     width: 320px;
     align-items: center;
     padding-top: 248px;
+    transition: 0.3s;
   }
 }
 
@@ -707,17 +709,17 @@ input:checked ~ .hamburger {
 .menu__item:not(:last-child) {
   margin-right: 35px;
 }
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .menu__item:not(:last-child) {
     margin-right: 0;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .menu__item:nth-child(1) {
     margin-bottom: 43px;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .menu__item:not(:first-child):not(:last-child) {
     margin-bottom: 40px;
   }
@@ -740,13 +742,18 @@ input:checked ~ .hamburger {
 .menu__link:hover {
   color: #FAFAFA;
 }
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .menu__link {
     font-size: 3.2rem;
     font-style: normal;
     font-weight: 400;
     line-height: 5.1rem;
   }
+}
+
+.open {
+  right: 0;
+  transition: 0.3s;
 }
 
 .button {
@@ -869,11 +876,6 @@ input:checked ~ .hamburger {
   justify-content: space-evenly;
   column-gap: 9rem;
 }
-@media (max-width: 1200px) {
-  .slider__line {
-    column-gap: 4rem;
-  }
-}
 @media (max-width: 595px) {
   .slider__line {
     width: 100%;
@@ -892,16 +894,6 @@ input:checked ~ .hamburger {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   background-color: #FFFFFF;
 }
-@media (max-width: 1200px) {
-  .card:nth-child(3n) {
-    display: none;
-  }
-}
-@media (max-width: 760px) {
-  .card:nth-child(2n) {
-    display: none;
-  }
-}
 
 .arrow-img {
   display: block;
@@ -914,6 +906,7 @@ input:checked ~ .hamburger {
   border-radius: 100%;
   background-color: transparent;
   transition: all 0.3s;
+  flex-shrink: 0;
 }
 .slider__button:hover {
   background-color: #FDDCC4;
@@ -930,6 +923,48 @@ input:checked ~ .hamburger {
   .slider__button_arrow-next {
     order: 3;
   }
+}
+
+.carousel-wrapper {
+  max-width: 990px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  left: -1080px;
+  gap: 90px;
+}
+
+@keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 2s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 2s;
+}
+
+.hidden {
+  display: none;
 }
 
 .our-friends {

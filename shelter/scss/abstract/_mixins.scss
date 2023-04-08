@@ -28,3 +28,6 @@
 @mixin media-slider-width {
     @media (max-width: $slider-width-px) {@content;}
 }
+@mixin media-hamburger {
+    @media (max-width: $hamburger-menu-visable) {@content;}
+}

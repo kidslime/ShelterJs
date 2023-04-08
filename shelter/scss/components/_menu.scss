@@ -3,17 +3,18 @@
     display: flex;
     margin: 0;
     padding: 0;
-    @include media-tablet-small{
-        display: none;
+    @include media-hamburger{
+        display: flex;
         flex-direction: column;
         background-color: #292929;
         height: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -320px;
         width: 320px;
         align-items: center;
         padding-top: 248px;
+        transition: .3s;
     }
 }
 
@@ -21,17 +22,17 @@
     list-style: none;
     &:not(:last-child) {
         margin-right: 35px;
-        @include media-tablet-small{
+        @include media-hamburger{
             margin-right: 0;
         }
     }
     &:nth-child(1) {
-        @include media-tablet-small{
+        @include media-hamburger{
             margin-bottom: 43px;
         }
     }
     &:not(:first-child):not(:last-child) {
-        @include media-tablet-small{
+        @include media-hamburger{
             margin-bottom: 40px;
         }
     }
@@ -50,7 +51,12 @@
     &:hover {
         color: $color-light-s;
     }
-    @include media-tablet-small{
+    @include media-hamburger{
         @include font($size:3.2rem, $line-height:5.1rem);
     }
+}
+
+.open {
+    right: 0;
+    transition: .3s;
 }
