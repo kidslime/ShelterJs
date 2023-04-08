@@ -1,12 +1,24 @@
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    @include media-slider-width {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
 .slider__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 6rem;
     @include media-tablet-small {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px 80px;
+        
     }
     @include media-mobile-big {
         margin-bottom: 42px;
@@ -15,13 +27,21 @@
 }
 
 .slider__line {
+    width: 990px;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
-    column-gap: 9rem;
-    
-    @include media-slider-width {
-        width: 100%;
+    justify-content: space-between;
+    margin: 0 50px;
+    transition: margins .5s;
+    @include media-laptop-small {
+        justify-content: space-evenly;
+        margin: 0;
     }
+    // column-gap: 9rem;
+    
+    // @include media-slider-width {
+    //     width: 100%;
+    // }
 }
 
 .card {
@@ -30,6 +50,7 @@
     padding-bottom: 3rem;
     border-radius: 0.9rem;
     transition: all 0.3s;
+    
     &:hover {
         cursor: pointer;
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
@@ -66,7 +87,7 @@
 }
 
 .slider__button_arrow-prev {
-    @include media-slider-width  {
+    @include  media-slider-width {
         order: 2;
     }
 }
@@ -80,27 +101,43 @@
 
 
 .carousel-wrapper {
-    max-width: 990px;
+    display: flex;
+    justify-content: center;
+    width: 1090px;
     overflow: hidden;
+    position: relative;
 }
 
 .carousel {
+    width: 300%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    left: -1080px;
-    gap: 90px;
     
 
 }
 
 
-@keyframes move-right {
+@keyframes move-left {
     from {
-        left: -1080px;
+        left: 0;
+
     }
 
     to {
-        left: -2160px;
+        left: 100%;
+    }
+}
+
+@keyframes move-right {
+    from {
+        left: 0;
+
+    }
+
+    to {
+        left: -100%;
     }
 }
 
@@ -109,15 +146,9 @@
     animation-duration: 2s;
 }
 
-@keyframes move-left {
-    from {
-        left: -1080px;
-        ;
-    }
-
-    to {
-        left: 0px;
-    }
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 2s;
 }
 
 .transition-left {
@@ -129,6 +160,3 @@
     display: none;
 }
 
-.left {
-    
-}

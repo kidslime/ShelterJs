@@ -852,10 +852,24 @@ h4 {
   }
 }
 
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+@media (max-width: 595px) {
+  .slider {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
 .slider__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 6rem;
 }
 @media (max-width: 760px) {
@@ -872,13 +886,17 @@ h4 {
 }
 
 .slider__line {
+  width: 990px;
+  height: 100%;
   display: flex;
-  justify-content: space-evenly;
-  column-gap: 9rem;
+  justify-content: space-between;
+  margin: 0 50px;
+  transition: margins 0.5s;
 }
-@media (max-width: 595px) {
+@media (max-width: 1200px) {
   .slider__line {
-    width: 100%;
+    justify-content: space-evenly;
+    margin: 0;
   }
 }
 
@@ -926,23 +944,35 @@ h4 {
 }
 
 .carousel-wrapper {
-  max-width: 990px;
+  display: flex;
+  justify-content: center;
+  width: 1090px;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel {
+  width: 300%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
-  left: -1080px;
-  gap: 90px;
 }
 
-@keyframes move-right {
+@keyframes move-left {
   from {
-    left: -1080px;
+    left: 0;
   }
   to {
-    left: -2160px;
+    left: 100%;
+  }
+}
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
   }
 }
 .transition-right {
@@ -950,14 +980,11 @@ h4 {
   animation-duration: 2s;
 }
 
-@keyframes move-left {
-  from {
-    left: -1080px;
-  }
-  to {
-    left: 0px;
-  }
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 2s;
 }
+
 .transition-left {
   animation-name: move-left;
   animation-duration: 2s;
