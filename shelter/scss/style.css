@@ -530,6 +530,17 @@ h4 {
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .hamb-overlay {
+    width: calc(100% - 320px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+  }
+}
+
 .container {
   max-width: 1260px;
   margin: auto;
@@ -1422,6 +1433,7 @@ h4 {
 
 .modal__content-img {
   width: 500px;
+  border-radius: 9px;
 }
 @media (max-width: 1200px) {
   .modal__content-img {

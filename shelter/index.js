@@ -247,9 +247,6 @@ const data = [
                 <li><h4  class="modal-color"><strong>Inoculations:</strong> ${this.inoculations}</h4></li>
                 <li><h4  class="modal-color"><strong>Diseases:</strong> ${this.diseases}</h4></li>
                 <li><h4  class="modal-color"><strong>Parasites:</strong> ${this.parasites}</h4></li></ul>`
-      // this.type = type;
-      // this.breed = breed;
-      // this.description = description;
       pet.innerHTML = template;
       return pet;
   }
@@ -264,32 +261,25 @@ const HAMBURGER = document.querySelector('.hamburger');
 const MENU = document.querySelector('.menu')
 const MENU_LINK = document.querySelectorAll('.menu__link')
 const BODY = document.querySelector('body')
-
-function clickHadlerCloseHamburger() {
-  window.addEventListener('click', function (e) {
-      if (!MENU.contains(e.target) && !HAMBURGER.contains(e.target)) {
-          MENU.classList.remove('open');
-          HAMBURGER.classList.remove('rotate')
-          BODY.classList.remove('unscroll')
-          window.removeEventListener('click')
-      }
-  });
-
-}
-
+window.addEventListener('click', function (e) {
+    if (!MENU.contains(e.target) && !HAMBURGER.contains(e.target)) {
+        MENU.classList.remove('open');
+        HAMBURGER.classList.remove('rotate')
+        BODY.classList.remove('unscroll')
+    }
+});
 
 HAMBURGER.addEventListener('click', ()=> {
     MENU.classList.toggle('open')
-    HAMBURGER.classList.add('rotate')
+    HAMBURGER.classList.toggle('rotate')
     BODY.classList.toggle('unscroll')
-    clickHadlerCloseHamburger() 
 })
 
 MENU.addEventListener('click', (e)=>{
   if(e.target.classList['value'] === 'menu__link'){
     MENU.classList.remove('open');
-    HAMBURGER.classList.toggle('rotate')
-    BODY.classList.toggle('unscroll')
+    HAMBURGER.classList.add('rotate')
+    BODY.classList.remove('unscroll')
   }
 })
 
