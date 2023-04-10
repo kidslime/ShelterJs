@@ -13,6 +13,7 @@
 @import "components/slider";
 @import "components/our-friends";
 @import "layouts/footer";
+@import "base/modal";
 
 .header {
     position: static;
@@ -160,4 +161,23 @@
         gap: 60px 40px;
     }
 }
+
+
+.menu__link {
+    
+    &_active {
+        @include media-hamburger{
+            color: $color-light-l;
+            border-bottom: 0.3rem solid $color-primary;
+            
+        }
+    }
+    &:hover {
+        color: $color-light-s;
+    }
+    @include media-hamburger{
+        @include font($size:3.2rem, $line-height:5.1rem);
+    }
+}
+
 
